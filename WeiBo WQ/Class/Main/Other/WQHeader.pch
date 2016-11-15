@@ -1,0 +1,75 @@
+//
+//  WQHeader.pch
+//  WeiBo WQ
+//
+//  Created by 闻强 on 16/10/16.
+//  Copyright © 2016年 闻强. All rights reserved.
+//
+
+#ifndef WQHeader_pch
+#define WQHeader_pch
+#import "UIImage+Extension.h"
+#import "Foundation/Foundation.h"
+#import "UIKit/UIKit.h"
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+//随机色
+#define WQRandomColor [UIColor colorWithRed:arc4random_uniform(255) /256.0 green:arc4random_uniform(255) /256.0 blue:arc4random_uniform(255) /256.0 alpha:1];
+//识别当前设备是不是iOS7
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+
+
+// 添加颜色
+
+#define WQColor(r,g,b)[UIColor colorWithRed:(r) /256.0 green:(g) /256.0 blue:(b) /256.0 alpha:1];
+
+#define WQNaviagtionTitleFont [UIFont boldSystemFontOfSize:20]
+
+#ifdef DEBUG // 调试状态打开log功能
+#define WQLOG(...) NSLog(__VA_ARGS__)
+#else//发布状态关闭log功能
+#define WQLog(...)
+#endif
+//App Key：785792845
+//App Secret：205d7c1b9f3fac5bfcd4f8208689be15
+
+
+// 153号码
+//App Key：1312908092
+//App Secret：743140ed95833d49f31b5cead80f883c
+//应用信息
+#define APPKEY @"1312908092"
+#define APPSECRET @"743140ed95833d49f31b5cead80f883c"
+#define REDIRECTURL @"http://www.baidu.com"
+
+
+
+// 屏幕尺寸
+#define WQScreenW [UIScreen mainScreen].bounds.size.width
+
+#define WQScreenH [UIScreen mainScreen].bounds.size.height
+
+
+// cell的计算参数
+// cell的内边距
+#define WQStatusCellInset 10
+
+// 原创微博昵称字体
+#define WQStatusOrginalNameFont [UIFont systemFontOfSize:14]
+// 原创微博时间字体
+#define WQStatusOrginalTimeFont [UIFont systemFontOfSize:12]
+// 原创微博来源字体
+#define WQStatusOrginalSourceFont WQStatusOrginalTimeFont
+// 原创微博正文字体
+#define WQStatusOrginalTextFont [UIFont systemFontOfSize:15]
+
+// 转发微博昵称字体
+#define WQStatusRetweetedNameFont WQStatusOrginalNameFont
+// 转发微博正文字体
+#define WQStatusRetweetedTextFont WQStatusOrginalTextFont
+
+//tableView 有点灰的颜色
+#define WQLittleGray  [UIColor colorWithRed:0.96 green:0.96 blue:0.96 alpha:0.96]
+
+
+#endif /* WQHeader_pch */
