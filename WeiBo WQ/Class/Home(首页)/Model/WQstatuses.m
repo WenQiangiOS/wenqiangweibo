@@ -13,4 +13,34 @@
 - (NSDictionary *)objectClassInArray {
     return @{@"pic_ids" : [WQPhoto class]};
 }
+
+- (NSString *)created_at {
+    NSDateFormatter * fmt = [[NSDateFormatter alloc] init];
+    //Wed Nov 16 20:39:49 +0800 2016
+    fmt.dateFormat = @"EEE MMM dd HH:mm:ss Z yyyy";
+    
+    NSDate * createDate = [fmt dateFromString:_created_at];
+    fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+  
+    NSString * timeStr = [fmt stringFromDate:createDate];
+    
+  
+    
+    
+
+    
+    
+    
+    WQLOG(@"%@",timeStr);
+
+    
+
+
+    
+    
+return timeStr;
+    
+
+    
+}
 @end
