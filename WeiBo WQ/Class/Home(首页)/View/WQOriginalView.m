@@ -50,9 +50,11 @@
         [self addSubview:sourceLabel];
         self.sourceLabel = sourceLabel;
         
+        
         // 时间
         UILabel * timeLabel = [[UILabel alloc] init];
         timeLabel.font= WQStatusOrginalTimeFont;
+        timeLabel.backgroundColor = [UIColor yellowColor];
         timeLabel.textColor = [UIColor lightGrayColor];
         [self addSubview:timeLabel];
         self.timeLabel = timeLabel;
@@ -79,9 +81,6 @@
     WQUser * user = status.user;
     
     
-    // 头像
-//    self.iconView.frame = CGRectMake(10, 10, 35, 35);
-    
     self.iconView.frame = orginalFrame.iconFrame;
     
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage resizedImage:@"avatar_default"]];
@@ -96,20 +95,28 @@
     self.textLabel.text = status.text;
     self.textLabel.frame = orginalFrame.textFrame;
 
-    
-    // 来源
-    self.sourceLabel.text = status.source;
-    
-//    WQLOG(@"%@",status.source);
-    self.sourceLabel.frame = orginalFrame.sourceFrame;
-    
 
     
     // 时间
     self.timeLabel.text = status.created_at;
-    self.timeLabel.frame = orginalFrame.timeFrame;
-    
+    CGFloat timeX = CGRectGetMinX(self.nameLabel.frame);
+    CGFloat timeY = CGRectGetMaxY(self.nameLabel.frame) + WQStatusCellInset;
+    NSDictionary * timeAttributes = @{NSFontAttributeName:WQStatusOrginalTimeFont};
+    CGSize timeSize = [status.created_at sizeWithAttributes:timeAttributes];
+    self.timeLabel.frame = (CGRect){{timeX,timeY},timeSize};
 
+    
+    
+    // 来源
+    self.sourceLabel.text = status.source;
+    CGFloat sourceX = CGRectGetMaxX(self.timeLabel.frame) + WQStatusCellInset;
+    CGFloat sourceY = timeY;
+    NSDictionary * sourceAttr = @{NSFontAttributeName:WQStatusOrginalSourceFont};
+    CGSize sourceSize = [status.source sizeWithAttributes:sourceAttr];
+    self.sourceLabel.frame = (CGRect){{sourceX,sourceY},sourceSize};
+    
+    
+    
   
     
 

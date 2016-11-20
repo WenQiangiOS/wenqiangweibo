@@ -285,13 +285,13 @@
     //动画效果
     
     CGFloat duration = 1.0;
-    label.alpha = 0.0;
+//    label.alpha = 0.0;
     
     [UIView animateWithDuration:duration delay:0 options: UIViewAnimationOptionCurveEaseInOut  animations:^{
         // 设置变形
         label.transform = CGAffineTransformMakeTranslation(0, label.height);
         //设置透明度
-        label.alpha = 1.0;
+//        label.alpha = 1.0;
         
     } completion:^(BOOL finished) {
         
@@ -301,7 +301,7 @@
             //回到原位
             label.transform = CGAffineTransformIdentity;
             //透明度为0
-            label.alpha = 0;
+//            label.alpha = 0;
             
         } completion:^(BOOL finished) {
             //移除label

@@ -13,11 +13,9 @@
 - (NSDictionary *)objectClassInArray {
     return @{@"pic_ids" : [WQPhoto class]};
 }
-
-- (NSString *)created_at {
+- (void)setCreated_at:(NSString *)created_at {
     
-
-  NSString * dateStr = [NSString eglishDateTransformChinaDate:_created_at];
+    NSString * dateStr = [NSString eglishDateTransformChinaDate:created_at];
     
     
     NSDateFormatter * fmt = [[NSDateFormatter alloc] init];
@@ -34,35 +32,57 @@
         if (newDate.isToday) {
             if (cmps.hour >=1) {//大于一小时
                 fmt.dateFormat = @"HH:mm";
-                return [fmt stringFromDate:newDate];
+                _created_at =  [fmt stringFromDate:newDate];
             } else if (cmps.minute>=1){//大于一分钟
-                return [NSString stringWithFormat:@"%ld分钟前",cmps.minute];
+                _created_at =   [NSString stringWithFormat:@"%ld分钟前",cmps.minute];
             } else {//小于60秒
-                   return @"刚刚";
+                _created_at = @"刚刚";
             }
             
         }else if (newDate.isYesterday) { // 昨天发的微博
             
             fmt.dateFormat = @"昨天 HH:mm";
-            return [fmt stringFromDate:newDate];
+            _created_at =   [fmt stringFromDate:newDate];
         }else { // 前天发的微博
             
             fmt.dateFormat = @"MM-dd HH:mm";
-            return [fmt stringFromDate:newDate];
+            _created_at = [fmt stringFromDate:newDate];
         }
     }else { // 非今年
         fmt.dateFormat = @"yy-MM-dd HH:mm:ss";
-        return [fmt stringFromDate:newDate];
+        _created_at = [fmt stringFromDate:newDate];
+        
+    }
+    
+}
 
+
+- (void)setSource:(NSString *)source {
+    NSRange  range ;
+    
+    range = [source rangeOfString:@">"];
+    if (range.length ==  NSNotFound || range.length == 0) {
+        _source = @"不明AOE";
+    } else  {
+        NSRange range2;
+        range2.location = [source rangeOfString:@">"].location +1;
+        
+        range2.length = [source rangeOfString:@"</"].location - range2.location;
+        
+        if (range2.length == NSNotFound || range2.length == 0) {
+            _source = @"不明AOE";
+        } else {
+            _source = [source substringWithRange:range2];
+            
+            
+            WQLOG(@"%@",NSStringFromRange(range2
+                                          ));
+        }
+        
+        
     }
     
     
-    
-  
-    
-    
-  
-   
     
 }
 
