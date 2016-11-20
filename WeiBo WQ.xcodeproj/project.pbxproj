@@ -50,6 +50,7 @@
 		597E0C681DCB47F7006E2084 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 597E0C5E1DCB47F7006E2084 /* NSObject+MJKeyValue.m */; };
 		597E0C691DCB47F7006E2084 /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 597E0C601DCB47F7006E2084 /* NSObject+MJMember.m */; };
 		5992A2281DBFA0C7000B15C9 /* WQNewFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 5992A2271DBFA0C7000B15C9 /* WQNewFeature.m */; };
+		59A154151DE15E9C008298CD /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A154141DE15E9C008298CD /* NSString+Extension.m */; };
 		59BA04171DB3A8BE004AB027 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA04161DB3A8BE004AB027 /* main.m */; };
 		59BA04231DB3A8BE004AB027 /* WeiBo_WQ.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59BA04211DB3A8BE004AB027 /* WeiBo_WQ.xcdatamodeld */; };
 		59BA04251DB3A8BE004AB027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59BA04241DB3A8BE004AB027 /* Assets.xcassets */; };
@@ -214,6 +215,8 @@
 		597E0C601DCB47F7006E2084 /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
 		5992A2261DBFA0C7000B15C9 /* WQNewFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQNewFeature.h; sourceTree = "<group>"; };
 		5992A2271DBFA0C7000B15C9 /* WQNewFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQNewFeature.m; sourceTree = "<group>"; };
+		59A154131DE15E9C008298CD /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		59A154141DE15E9C008298CD /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		59BA04121DB3A8BE004AB027 /* WeiBo WQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeiBo WQ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59BA04161DB3A8BE004AB027 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		59BA04221DB3A8BE004AB027 /* WeiBo_WQ.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeiBo_WQ.xcdatamodel; sourceTree = "<group>"; };
@@ -677,6 +680,8 @@
 				59796F331DB4AA8000ACFE86 /* UIView+Extension.m */,
 				59796F351DB4B4F700ACFE86 /* UIBarButtonItem+Extension.h */,
 				59796F361DB4B4F700ACFE86 /* UIBarButtonItem+Extension.m */,
+				59A154131DE15E9C008298CD /* NSString+Extension.h */,
+				59A154141DE15E9C008298CD /* NSString+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1141,6 +1146,7 @@
 				597E0C681DCB47F7006E2084 /* NSObject+MJKeyValue.m in Sources */,
 				597E0C251DCB2708006E2084 /* SDWebImageManager.m in Sources */,
 				597E0C2C1DCB2708006E2084 /* UIImageView+WebCache.m in Sources */,
+				59A154151DE15E9C008298CD /* NSString+Extension.m in Sources */,
 				597E0C611DCB47F7006E2084 /* MJArgument.m in Sources */,
 				59FBB6BB1DC9AAF10057E8B2 /* WQControlTool.m in Sources */,
 				59DFA9C91DD9E2520059B701 /* WQStatusDetailFrame.m in Sources */,

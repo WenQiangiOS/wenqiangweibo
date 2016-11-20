@@ -15,32 +15,28 @@
 }
 
 - (NSString *)created_at {
+
+  NSString * dateStr = [NSString eglishDateTransformChinaDate:_created_at];
+    
+    
     NSDateFormatter * fmt = [[NSDateFormatter alloc] init];
-    //Wed Nov 16 20:39:49 +0800 2016
-    fmt.dateFormat = @"EEE MMM dd HH:mm:ss Z yyyy";
+    fmt.dateFormat = @"yyyy MM dd HH:mm:ss";
     
-    NSDate * createDate = [fmt dateFromString:_created_at];
+    NSDate * newDate = [fmt dateFromString:dateStr];
+    
+    
     fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-  
-    NSString * timeStr = [fmt stringFromDate:createDate];
+    
+    NSString * newDateStr = [fmt stringFromDate:newDate];
     
   
     
     
-
-    
-    
-    
-    WQLOG(@"%@",timeStr);
-
-    
-
-
-    
-    
-return timeStr;
-    
-
+    WQLOG(@"%@",newDateStr);
+   
+    return dateStr;
     
 }
+
+
 @end
