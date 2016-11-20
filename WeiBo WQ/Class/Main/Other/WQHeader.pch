@@ -14,6 +14,7 @@
 #import "UIView+Extension.h"
 #import "UIBarButtonItem+Extension.h"
 #import "NSString+Extension.h"
+#import "NSDate+MJ.h"
 //随机色
 #define WQRandomColor [UIColor colorWithRed:arc4random_uniform(255) /256.0 green:arc4random_uniform(255) /256.0 blue:arc4random_uniform(255) /256.0 alpha:1];
 //识别当前设备是不是iOS7
