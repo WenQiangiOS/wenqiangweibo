@@ -196,7 +196,6 @@
     //加载微博数据
     [WQStatusTool homeStatusWithParams:parms success:^(WQHomeStatusesResult *result) {
         
-        
 
         //字典转模型
         NSArray * newStatuses = [self statusFrameWithStatuse:result.statuses];

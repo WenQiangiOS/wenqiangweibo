@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		591655BC1DE43D0B00C7716B /* WQRadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 591655BB1DE43D0B00C7716B /* WQRadarView.m */; };
+		591655BF1DE5661900C7716B /* WQStatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 591655BE1DE5661900C7716B /* WQStatusPhotosView.m */; };
+		591655C21DE5663A00C7716B /* WQStatusPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 591655C11DE5663A00C7716B /* WQStatusPhotoView.m */; };
 		5925333C1DD455D9007EA9F9 /* WQComposeToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5925333B1DD455D9007EA9F9 /* WQComposeToolBar.m */; };
 		5925333F1DD47129007EA9F9 /* WQComposePhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5925333E1DD47129007EA9F9 /* WQComposePhotoView.m */; };
 		592622FF1DCDC03E0053232B /* WQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 592622FE1DCDC03E0053232B /* WQTextView.m */; };
@@ -134,6 +136,10 @@
 		59155F7E1DC78B9F00B8BB3B /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		591655BA1DE43D0B00C7716B /* WQRadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQRadarView.h; sourceTree = "<group>"; };
 		591655BB1DE43D0B00C7716B /* WQRadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQRadarView.m; sourceTree = "<group>"; };
+		591655BD1DE5661900C7716B /* WQStatusPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQStatusPhotosView.h; sourceTree = "<group>"; };
+		591655BE1DE5661900C7716B /* WQStatusPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQStatusPhotosView.m; sourceTree = "<group>"; };
+		591655C01DE5663A00C7716B /* WQStatusPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQStatusPhotoView.h; sourceTree = "<group>"; };
+		591655C11DE5663A00C7716B /* WQStatusPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQStatusPhotoView.m; sourceTree = "<group>"; };
 		5925333A1DD455D9007EA9F9 /* WQComposeToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQComposeToolBar.h; sourceTree = "<group>"; };
 		5925333B1DD455D9007EA9F9 /* WQComposeToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQComposeToolBar.m; sourceTree = "<group>"; };
 		5925333D1DD47129007EA9F9 /* WQComposePhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQComposePhotoView.h; sourceTree = "<group>"; };
@@ -873,6 +879,10 @@
 				59DFA9B21DD9CE870059B701 /* WQOriginalView.m */,
 				59DFA9B41DD9CE9A0059B701 /* WQRetweetedVeiw.h */,
 				59DFA9B51DD9CE9A0059B701 /* WQRetweetedVeiw.m */,
+				591655BD1DE5661900C7716B /* WQStatusPhotosView.h */,
+				591655BE1DE5661900C7716B /* WQStatusPhotosView.m */,
+				591655C01DE5663A00C7716B /* WQStatusPhotoView.h */,
+				591655C11DE5663A00C7716B /* WQStatusPhotoView.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -1168,6 +1178,7 @@
 				59DFA9661DD8594B0059B701 /* WQHomeStatusesParms.m in Sources */,
 				59DFA97F1DD870B90059B701 /* WQUserInfoParms.m in Sources */,
 				597E0C1F1DCB2708006E2084 /* NSData+ImageContentType.m in Sources */,
+				591655C21DE5663A00C7716B /* WQStatusPhotoView.m in Sources */,
 				59FB08641DC492B40011EDFC /* AFSecurityPolicy.m in Sources */,
 				59DFA9A61DD8907B0059B701 /* WQUnreadCountResult.m in Sources */,
 				59FBB6BE1DC9ACF30057E8B2 /* WQAccount.m in Sources */,
@@ -1218,6 +1229,7 @@
 				59BA04891DB496E7004AB027 /* AppDelegate.m in Sources */,
 				59DFA9B01DD9CE280059B701 /* WQDetailView.m in Sources */,
 				59796F461DB4BA7500ACFE86 /* WQOneViewController.m in Sources */,
+				591655BF1DE5661900C7716B /* WQStatusPhotosView.m in Sources */,
 				59DFA9CC1DD9E2620059B701 /* WQOriginalFrame.m in Sources */,
 				59DFA9B61DD9CE9A0059B701 /* WQRetweetedVeiw.m in Sources */,
 				59F1FC291DB6003700405E1B /* WQSearchBar.m in Sources */,

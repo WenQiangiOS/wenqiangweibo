@@ -9,6 +9,8 @@
 #import "WQOriginalFrame.h"
 #import "WQstatuses.h"
 #import "WQUser.h"
+#import "WQStatusPhotosView.h"
+
 @implementation WQOriginalFrame
 - (void)setStatus:(WQstatuses *)status {
     _status = status;
@@ -45,13 +47,29 @@
  
     self.textFrame = (CGRect){{textX,textY},rect.size};
     
-    
+    //图片
 
+    CGFloat h= 0;
+    if (status.pic_urls.count) {
+        
+        CGFloat photosX = textX;
+        CGFloat photosY = CGRectGetMaxY(self.textFrame) + WQStatusCellInset;
+        CGSize  photosSize = [WQStatusPhotosView sizeWithPhotosCount:status.pic_urls.count];
+        self.photosFrame = (CGRect){{photosX,photosY},photosSize};
+        h = CGRectGetMaxY(self.photosFrame) + WQStatusCellInset;
+
+        
+    } else {
+        h = CGRectGetMaxY(self.textFrame) + WQStatusCellInset;
+    }
+    
+    
+    
+    
 
     CGFloat x= 0;
     CGFloat y = 0;
     CGFloat w = WQScreenW;
-    CGFloat h = CGRectGetMaxY(self.textFrame) + WQStatusCellInset;
     self.originalFrame = CGRectMake(x, y, w, h);
     
     

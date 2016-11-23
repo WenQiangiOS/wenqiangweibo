@@ -10,12 +10,18 @@
 #import "WQUser.h"
 #import "WQRetweetedFrame.h"
 #import "WQstatuses.h"
+#import "WQStatusPhotosView.h"
 @interface WQRetweetedVeiw ()
 //昵称
 @property (nonatomic , weak)UILabel * nameLabel;
 
 //正文
 @property (nonatomic , weak)UILabel * textLabel;
+
+
+//图片
+@property (nonatomic , weak)WQStatusPhotosView * photosView;
+
 
 @end
 @implementation WQRetweetedVeiw
@@ -35,6 +41,13 @@
         textLabel.numberOfLines = 0;
         [self addSubview:textLabel];
         self.textLabel = textLabel;
+        
+        
+        //图片
+        
+        WQStatusPhotosView * photosView = [[WQStatusPhotosView alloc] init];
+        [self addSubview:photosView];
+        self.photosView = photosView;
         
 
     }
@@ -59,6 +72,18 @@
     //正文
     self.textLabel.text = status.text;
     self.textLabel.frame = retweetedFrame.textFrame;
+    
+    
+    //图片
+    
+    //图片
+    if (status.pic_urls.count) {
+        self.photosView.frame = retweetedFrame.photosFrame;
+        self.photosView.hidden = NO;
+    } else{
+        self.photosView.hidden = YES;
+    }
+    
     
     
 }

@@ -128,22 +128,37 @@
    
 }
 
-
+#pragma mark 按钮细节显示
+// 设置toolBar的各个按钮的显示数字
 - (void)setStatus:(WQstatuses *)status {
     _status = status;
     
-    UIButton * buttn =  self.repostsBtn;
-    [buttn setTitle:status.reposts_count ?[NSString stringWithFormat:@"%d",status.reposts_count]:@"转发" forState:UIControlStateNormal];
-
-    
-    UIButton * commentBtn = self.commentBtn;
-    [commentBtn setTitle:status.comments_count ?[NSString stringWithFormat:@"%d",status.comments_count]:@"评论" forState:UIControlStateNormal];
     
     
-    UIButton * attitudeBtn =  self.attitudesBtn;
-    [attitudeBtn setTitle:status.attitudes_count ?[NSString stringWithFormat:@"%d",status.attitudes_count]:@"赞" forState:UIControlStateNormal];
+    [self titleButton:self.repostsBtn count:status.reposts_count defaultTitle:@"转发"];
+    
+    [self titleButton:self.commentBtn count:status.comments_count defaultTitle:@"评论"];
+    
+    [self titleButton:self.attitudesBtn count:status.attitudes_count defaultTitle:@"赞"];
+    
     
 }
+
+//按钮数字处理
+- (void)titleButton:(UIButton *)button count:(int)count defaultTitle:(NSString *)defaultTitle{
+    if (count >= 10000) { //大于1w文字的显示
+        
+        defaultTitle = [NSString stringWithFormat:@"%.1f万",count/10000.0] ;
+        defaultTitle = [defaultTitle stringByReplacingOccurrencesOfString:@".0" withString:@"" ];
+    } else if (count > 0) { // 1~9999 之间的显示
+        defaultTitle = [NSString stringWithFormat:@"%d",count];
+    }
+    
+    [button setTitle:defaultTitle forState:UIControlStateNormal];
+    
+    
+}
+
 
 
 @end

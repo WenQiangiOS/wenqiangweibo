@@ -11,12 +11,12 @@
 #import "WQPhoto.h"
 @implementation WQstatuses
 - (NSDictionary *)objectClassInArray {
-    return @{@"pic_ids" : [WQPhoto class]};
+    return @{@"pic_urls" : [WQPhoto class]};
 }
 
 //get 方法时刻都是在调用
 - (NSString *)created_at {
-    
+
     NSString * dateStr = [NSString eglishDateTransformChinaDate:_created_at];
     
     NSDateFormatter * fmt = [[NSDateFormatter alloc] init];
@@ -54,6 +54,7 @@
         return [fmt stringFromDate:newDate];
         
     }
+
 
 }
 

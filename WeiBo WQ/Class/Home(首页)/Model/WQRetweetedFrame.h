@@ -13,6 +13,9 @@
 @property (nonatomic, assign) CGRect nameFrame;
 /** 正文 */
 @property (nonatomic, assign) CGRect textFrame;
+/** 图片 */
+@property (nonatomic, assign) CGRect photosFrame;
+
 
 /** retweeted的frame */
 @property (nonatomic, assign) CGRect retweetedFrame;

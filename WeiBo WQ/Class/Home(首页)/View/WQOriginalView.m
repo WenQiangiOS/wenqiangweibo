@@ -11,6 +11,7 @@
 #import "WQUser.h"
 #import "WQstatuses.h"
 #import "UIImageView+WebCache.h"
+#import "WQStatusPhotosView.h"
 @interface WQOriginalView ()
 /** 昵称 */
 @property (nonatomic , weak)UILabel * nameLabel;
@@ -23,7 +24,7 @@
 /** 头像 */
 @property (nonatomic , weak)UIImageView * iconView;
 
-
+@property (nonatomic , weak) WQStatusPhotosView * photosView;
 
 
 
@@ -68,6 +69,15 @@
         UIImageView * iconView = [[UIImageView alloc]init];
         [self addSubview:iconView];
         self.iconView = iconView;
+        
+        
+        //图片
+        WQStatusPhotosView * photosView = [[WQStatusPhotosView alloc] init];
+        [self addSubview:photosView];
+        self.photosView = photosView;
+        
+        
+        
         
       
     }
@@ -119,6 +129,18 @@
     NSDictionary * sourceAttr = @{NSFontAttributeName:WQStatusOrginalSourceFont};
     CGSize sourceSize = [status.source sizeWithAttributes:sourceAttr];
     self.sourceLabel.frame = (CGRect){{sourceX,sourceY},sourceSize};
+    
+    
+    //图片
+    if (status.pic_urls.count) {
+        self.photosView.frame = orginalFrame.photosFrame;
+        self.photosView.hidden = NO;
+    } else{
+        self.photosView.hidden = YES;
+    }
+    
+    
+    
     
 
 
