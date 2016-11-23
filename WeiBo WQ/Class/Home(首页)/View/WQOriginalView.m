@@ -134,6 +134,7 @@
     //图片
     if (status.pic_urls.count) {
         self.photosView.frame = orginalFrame.photosFrame;
+        self.photosView.pic_urls = status.pic_urls;
         self.photosView.hidden = NO;
     } else{
         self.photosView.hidden = YES;

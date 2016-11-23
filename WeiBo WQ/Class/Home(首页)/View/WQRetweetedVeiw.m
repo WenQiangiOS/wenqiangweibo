@@ -79,6 +79,7 @@
     //图片
     if (status.pic_urls.count) {
         self.photosView.frame = retweetedFrame.photosFrame;
+        self.photosView.pic_urls = status.pic_urls;
         self.photosView.hidden = NO;
     } else{
         self.photosView.hidden = YES;

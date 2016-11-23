@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class WQPhoto;
 @interface WQStatusPhotoView : UIImageView
+
+@property (nonatomic , assign) WQPhoto *  photo;
+
 
 @end

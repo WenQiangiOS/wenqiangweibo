@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface WQStatusPhotosView : UIView
+
+@property (nonatomic , strong)NSArray * pic_urls;
 /**
  *  根据图片个数,显示图片排版
  */
