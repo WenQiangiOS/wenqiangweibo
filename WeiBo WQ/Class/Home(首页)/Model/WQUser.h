@@ -101,5 +101,15 @@
 
 /** 	string 	用户当前的语言版本，zh-cn：简体中文，zh-tw：繁体中文，en：英语*/
 @property (nonatomic , copy)NSString * lang;
+/** 会员类型 */
+@property (nonatomic, assign) int mbtype;
+
+/** 会员等级 */
+@property (nonatomic, assign) int mbrank;
+
+@property (nonatomic, assign, getter = isVip, readonly) BOOL vip;
+
+
+
 
 @end

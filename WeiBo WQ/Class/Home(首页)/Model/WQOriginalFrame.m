@@ -26,13 +26,18 @@
     /** 昵称 */
     CGFloat nameX = CGRectGetMaxX(self.iconFrame) + WQStatusCellInset;
     CGFloat nameY = iconY;
-
-    
     NSDictionary * attributes = @{NSFontAttributeName:WQStatusOrginalNameFont};
     CGSize nameSize = [status.user.name sizeWithAttributes:attributes];
-
     self.nameFrame = CGRectMake(nameX, nameY, nameSize.width, nameSize.height);
+    // 会员
     
+    if (status.user.isVip) {
+        CGFloat vipX = CGRectGetMaxX(self.nameFrame) +WQStatusCellInset;
+        CGFloat vipY = nameY;
+        CGFloat vipH = self.nameFrame.size.height;
+        CGFloat vipW = vipH;
+        self.vipFrame = CGRectMake(vipX, vipY, vipW, vipH);
+    }
 
     
     /** 正文 */
@@ -46,6 +51,8 @@
     CGRect  rect = [status.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:textAttr context:nil];
  
     self.textFrame = (CGRect){{textX,textY},rect.size};
+    
+
     
     //图片
 

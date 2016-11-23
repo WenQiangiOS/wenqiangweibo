@@ -24,6 +24,11 @@
 /** 头像 */
 @property (nonatomic , weak)UIImageView * iconView;
 
+/**
+ *  会员
+ */
+@property (nonatomic , weak)UIImageView * vipView;
+
 @property (nonatomic , weak) WQStatusPhotosView * photosView;
 
 
@@ -77,6 +82,12 @@
         self.photosView = photosView;
         
         
+        //会员
+        
+        UIImageView * vipView = [[UIImageView alloc] init];
+        [self addSubview:vipView];
+        self.vipView = vipView;
+        
         
         
       
@@ -104,6 +115,17 @@
     // 昵称
     self.nameLabel.text = user.name;
     self.nameLabel.frame = orginalFrame.nameFrame;
+    if (user.isVip) {//会员
+        self.nameLabel.textColor = [UIColor orangeColor];
+        self.vipView.hidden = NO;
+        self.vipView.frame = orginalFrame.vipFrame;
+        self.vipView.image = [UIImage imageNamed:[NSString stringWithFormat:@"common_icon_membership_level%d",user.mbrank]];
+    } else {
+        self.nameLabel.textColor = [UIColor blackColor];
+        self.vipView.hidden = YES;
+        
+    }
+
 
     
     //正文
