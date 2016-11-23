@@ -90,5 +90,9 @@
     
     //cell间距
     self.marginView.frame = statusCellFrame.cellMargin;
+    
+    //toolBar穿数据
+    
+    self.toolbarView.status = statusCellFrame.status;
 }
 @end

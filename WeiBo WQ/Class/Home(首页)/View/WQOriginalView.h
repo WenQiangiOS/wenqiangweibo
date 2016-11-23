@@ -10,4 +10,7 @@
 @class WQOriginalFrame;
 @interface WQOriginalView : UIView
 @property (nonatomic , strong)WQOriginalFrame * orginalFrame;
+
+
+
 @end

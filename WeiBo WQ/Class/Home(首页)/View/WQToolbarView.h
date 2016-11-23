@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WQstatuses;
+@interface WQToolbarView : UIImageView
 
-@interface WQToolbarView : UIView
+
+
+@property (nonatomic , assign) WQstatuses *   status;
+
+
 
 @end

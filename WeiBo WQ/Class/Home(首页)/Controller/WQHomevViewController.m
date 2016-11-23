@@ -24,6 +24,8 @@
 #import "WQStatusCellFrame.h"
 #import "WQStatusCell.h"
 
+#import "WQRadarView.h"
+
 
 @interface WQHomevViewController ()<WQPopMenuDelegate>
 @property (nonatomic , strong) NSMutableArray * statusFrame;
@@ -194,9 +196,10 @@
     //加载微博数据
     [WQStatusTool homeStatusWithParams:parms success:^(WQHomeStatusesResult *result) {
         
+        
+
         //字典转模型
         NSArray * newStatuses = [self statusFrameWithStatuse:result.statuses];
-        
         //新的字典模型的范围
         NSRange range = NSMakeRange(0,newStatuses.count);
         NSIndexSet * indexSet = [NSIndexSet indexSetWithIndexesInRange:range];
@@ -367,6 +370,18 @@
  */
 - (void)pop {
     WQLOG(@"雷达");
+    
+    WQRadarView * radarView = [[WQRadarView alloc] init];
+    
+//    UITableView * tableView = [[UITableView alloc] init];
+    WQPopMeun * leidaView = [WQPopMeun popMenuWithContentView:radarView];
+    leidaView.arrowPostion = WQPopMeunArrowRight;
+    leidaView.backgroundColor = [UIColor clearColor];
+    leidaView.dimBackgroud = NO;
+    
+    [leidaView showInRect:CGRectMake(self.view.width - 130, 50, 130, 150)];
+    
+    
 }
 
 
@@ -387,21 +402,9 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     WQStatusCell * cell = [WQStatusCell cellWithTableView:tableView];
 
-//    //模型取值
-//   WQstatuses * statuses = self.status[indexPath.row];
-//    
-//    //文本内容
-//    cell.textLabel.text =statuses.text;
-//    
-//    //用户ID
-//    cell.detailTextLabel.text = statuses.user.name;
-//    
-//    //用户头像
-//    NSString * imageUrlStr = statuses.user.profile_image_url;
-//    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imageUrlStr] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];
-//
     
     cell.statusCellFrame = self.statusFrame[indexPath.row];
     

@@ -13,6 +13,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         //添加所用按钮
+        
+        
         [self addImageIcon:@"compose_camerabutton_background" hightIcon:@"compose_camerabutton_background_highlighted" tag:WQComposeToolButtonCamera];
         [self addImageIcon:@"compose_toolbar_picture" hightIcon:@"compose_toolbar_picture_highlighted" tag:WQComposeToolButtonPicture];
         [self addImageIcon:@"compose_trendbutton_background" hightIcon:@"compose_trendbutton_background_highlighted" tag:WQComposeToolButtonTrend];

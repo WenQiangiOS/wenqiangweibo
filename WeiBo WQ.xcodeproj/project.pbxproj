@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		591655BC1DE43D0B00C7716B /* WQRadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 591655BB1DE43D0B00C7716B /* WQRadarView.m */; };
 		5925333C1DD455D9007EA9F9 /* WQComposeToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5925333B1DD455D9007EA9F9 /* WQComposeToolBar.m */; };
 		5925333F1DD47129007EA9F9 /* WQComposePhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5925333E1DD47129007EA9F9 /* WQComposePhotoView.m */; };
 		592622FF1DCDC03E0053232B /* WQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 592622FE1DCDC03E0053232B /* WQTextView.m */; };
@@ -131,6 +132,8 @@
 
 /* Begin PBXFileReference section */
 		59155F7E1DC78B9F00B8BB3B /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		591655BA1DE43D0B00C7716B /* WQRadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQRadarView.h; sourceTree = "<group>"; };
+		591655BB1DE43D0B00C7716B /* WQRadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQRadarView.m; sourceTree = "<group>"; };
 		5925333A1DD455D9007EA9F9 /* WQComposeToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQComposeToolBar.h; sourceTree = "<group>"; };
 		5925333B1DD455D9007EA9F9 /* WQComposeToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQComposeToolBar.m; sourceTree = "<group>"; };
 		5925333D1DD47129007EA9F9 /* WQComposePhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQComposePhotoView.h; sourceTree = "<group>"; };
@@ -654,6 +657,8 @@
 				59E693B11DCC909E00B7AB1E /* WQLoadingMoreFooter.h */,
 				59E693B21DCC909E00B7AB1E /* WQLoadingMoreFooter.m */,
 				59E693B41DCC90BA00B7AB1E /* WQLoadingMoreFooter.xib */,
+				591655BA1DE43D0B00C7716B /* WQRadarView.h */,
+				591655BB1DE43D0B00C7716B /* WQRadarView.m */,
 				59DFA9A71DD9CD960059B701 /* Cell */,
 			);
 			path = View;
@@ -1147,6 +1152,7 @@
 				59F1FC321DB90CE200405E1B /* WQTabBar.m in Sources */,
 				597A0E281DDB378400996D2A /* WQMarginVIew.m in Sources */,
 				597E0C671DCB47F7006E2084 /* NSObject+MJCoding.m in Sources */,
+				591655BC1DE43D0B00C7716B /* WQRadarView.m in Sources */,
 				59796F341DB4AA8000ACFE86 /* UIView+Extension.m in Sources */,
 				597E0C681DCB47F7006E2084 /* NSObject+MJKeyValue.m in Sources */,
 				597E0C251DCB2708006E2084 /* SDWebImageManager.m in Sources */,

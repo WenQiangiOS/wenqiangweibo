@@ -27,6 +27,7 @@
     [self setMarginViewFrame];
     
     self.cellHeight = CGRectGetMaxY(self.cellMargin);
+    
 }
 
 //设置微博正文frame

@@ -33,31 +33,6 @@
     
 
     
-//    /** 时间 */
-//    
-//    CGFloat timeX = nameX;
-//    CGFloat timeY = CGRectGetMaxY(self.nameFrame) + WQStatusCellInset;
-//    
-//    
-//    NSDictionary * timeAttributes = @{NSFontAttributeName:WQStatusOrginalTimeFont};
-//
-//    CGSize timeSize = [status.user.created_at sizeWithAttributes:timeAttributes];
-//    self.timeFrame = (CGRect){{timeX,timeY},timeSize};
-//    
-//
-//    
-//
-//    /** 来源 */
-//    
-//    CGFloat sourceX = CGRectGetMaxX(self.timeFrame) + WQStatusCellInset;
-//    CGFloat sourceY = timeY;
-//    NSDictionary * sourceAttr = @{NSFontAttributeName:WQStatusOrginalSourceFont};
-//    CGSize sourceSize = [status.source sizeWithAttributes:sourceAttr];
-//    self.sourceFrame = (CGRect){{sourceX,sourceY},sourceSize};
-//
-//
-
-    
     /** 正文 */
     
     CGFloat textX = iconX;
@@ -78,6 +53,9 @@
     CGFloat w = WQScreenW;
     CGFloat h = CGRectGetMaxY(self.textFrame) + WQStatusCellInset;
     self.originalFrame = CGRectMake(x, y, w, h);
+    
+    
+    
     
     
 }

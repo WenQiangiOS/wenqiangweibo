@@ -193,6 +193,7 @@
     //封装请求参数
     WQSendStatusParms * parms = [WQSendStatusParms params];
     parms.status = self.textView.text;
+    
   
     
     //POST请求
@@ -317,7 +318,7 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
     
     UIImage * image = info[UIImagePickerControllerOriginalImage];
-    
+    self.sendBarBt.enabled = YES;
     [self.photoView addImage:image];
 }
 @end

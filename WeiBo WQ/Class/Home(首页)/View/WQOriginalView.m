@@ -24,6 +24,11 @@
 @property (nonatomic , weak)UIImageView * iconView;
 
 
+
+
+
+
+
 @end
 @implementation WQOriginalView
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -54,7 +59,7 @@
         // 时间
         UILabel * timeLabel = [[UILabel alloc] init];
         timeLabel.font= WQStatusOrginalTimeFont;
-        timeLabel.backgroundColor = [UIColor yellowColor];
+//        timeLabel.backgroundColor = [UIColor yellowColor];
         timeLabel.textColor = [UIColor lightGrayColor];
         [self addSubview:timeLabel];
         self.timeLabel = timeLabel;
@@ -115,12 +120,12 @@
     CGSize sourceSize = [status.source sizeWithAttributes:sourceAttr];
     self.sourceLabel.frame = (CGRect){{sourceX,sourceY},sourceSize};
     
-    
-    
-  
-    
+
 
     
     
 }
+
+
+
 @end

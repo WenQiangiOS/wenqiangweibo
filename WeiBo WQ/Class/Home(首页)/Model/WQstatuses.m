@@ -13,10 +13,11 @@
 - (NSDictionary *)objectClassInArray {
     return @{@"pic_ids" : [WQPhoto class]};
 }
-- (void)setCreated_at:(NSString *)created_at {
+
+//get 方法时刻都是在调用
+- (NSString *)created_at {
     
-    NSString * dateStr = [NSString eglishDateTransformChinaDate:created_at];
-    
+    NSString * dateStr = [NSString eglishDateTransformChinaDate:_created_at];
     
     NSDateFormatter * fmt = [[NSDateFormatter alloc] init];
     fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
@@ -32,31 +33,32 @@
         if (newDate.isToday) {
             if (cmps.hour >=1) {//大于一小时
                 fmt.dateFormat = @"HH:mm";
-                _created_at =  [fmt stringFromDate:newDate];
+                return  [fmt stringFromDate:newDate];
             } else if (cmps.minute>=1){//大于一分钟
-                _created_at =   [NSString stringWithFormat:@"%ld分钟前",cmps.minute];
+                return [NSString stringWithFormat:@"%ld分钟前",cmps.minute];
             } else {//小于60秒
-                _created_at = @"刚刚";
+                return @"刚刚";
             }
             
         }else if (newDate.isYesterday) { // 昨天发的微博
             
             fmt.dateFormat = @"昨天 HH:mm";
-            _created_at =   [fmt stringFromDate:newDate];
+            return [fmt stringFromDate:newDate];
         }else { // 前天发的微博
             
             fmt.dateFormat = @"MM-dd HH:mm";
-            _created_at = [fmt stringFromDate:newDate];
+            return [fmt stringFromDate:newDate];
         }
     }else { // 非今年
         fmt.dateFormat = @"yy-MM-dd HH:mm:ss";
-        _created_at = [fmt stringFromDate:newDate];
+        return [fmt stringFromDate:newDate];
         
     }
-    
+
 }
 
 
+//set方法只是模型赋值的时候调用一次,以后都不会再调运
 - (void)setSource:(NSString *)source {
     NSRange  range ;
     
@@ -73,18 +75,15 @@
             _source = @"不明AOE";
         } else {
             _source = [source substringWithRange:range2];
-            
-            
-            WQLOG(@"%@",NSStringFromRange(range2
-                                          ));
+//            
         }
         
         
     }
     
-    
-    
 }
+
+
 
 
 @end
