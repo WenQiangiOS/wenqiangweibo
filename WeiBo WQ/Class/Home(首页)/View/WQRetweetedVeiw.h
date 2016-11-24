@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 @class WQRetweetedFrame;
-@interface WQRetweetedVeiw : UIView
+@interface WQRetweetedVeiw : UIImageView
 @property (nonatomic , strong)WQRetweetedFrame * retweetedFrame;
 @end

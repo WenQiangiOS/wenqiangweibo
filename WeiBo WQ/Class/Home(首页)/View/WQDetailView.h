@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 @class WQStatusDetailFrame;
-@interface WQDetailView : UIView
+@interface WQDetailView : UIImageView
 @property (nonatomic , strong)WQStatusDetailFrame* detailFrame;
 @end

@@ -12,4 +12,8 @@
 - (BOOL)isVip {
     return self.mbtype >2;
 }
+
+//- (BOOL)isV {
+//    return self.verified;
+//}
 @end

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WQStatusPhotosView : UIView
+@interface WQStatusPhotosView : UIImageView
 
 @property (nonatomic , strong)NSArray * pic_urls;
 /**

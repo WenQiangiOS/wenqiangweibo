@@ -28,6 +28,8 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self ) {
+        self.userInteractionEnabled = YES;
+        self.backgroundColor = WQLittleGray;
         //昵称
         UILabel * nameLabel = [[UILabel alloc] init];
         nameLabel.textColor = [UIColor colorWithRed:0.35 green:0.50 blue:0.61 alpha:1];
@@ -38,6 +40,8 @@
         //正文
         UILabel * textLabel = [[UILabel alloc] init];
         textLabel.font = WQStatusRetweetedTextFont;
+        textLabel.textColor =WQLtttleBlack ;
+
         textLabel.numberOfLines = 0;
         [self addSubview:textLabel];
         self.textLabel = textLabel;

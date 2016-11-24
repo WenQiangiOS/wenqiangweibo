@@ -22,6 +22,7 @@
         //文字字体
         self.titleLabel.font = WQNaviagtionTitleFont;
         
+        
         self.adjustsImageWhenHighlighted = NO;
    
         

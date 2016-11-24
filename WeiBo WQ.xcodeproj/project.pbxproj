@@ -68,6 +68,14 @@
 		59BA04891DB496E7004AB027 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA04761DB496E7004AB027 /* AppDelegate.m */; };
 		59BA048A1DB496E7004AB027 /* WQMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA047C1DB496E7004AB027 /* WQMessageViewController.m */; };
 		59BA048B1DB496E7004AB027 /* WQProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BA04821DB496E7004AB027 /* WQProfileViewController.m */; };
+		59D485601DE6E00100D632F0 /* MJPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D485521DE6E00100D632F0 /* MJPhoto.m */; };
+		59D485611DE6E00100D632F0 /* MJPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 59D485531DE6E00100D632F0 /* MJPhotoBrowser.bundle */; };
+		59D485621DE6E00100D632F0 /* MJPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D485551DE6E00100D632F0 /* MJPhotoBrowser.m */; };
+		59D485631DE6E00100D632F0 /* MJPhotoLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D485571DE6E00100D632F0 /* MJPhotoLoadingView.m */; };
+		59D485641DE6E00100D632F0 /* MJPhotoProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D485591DE6E00100D632F0 /* MJPhotoProgressView.m */; };
+		59D485651DE6E00100D632F0 /* MJPhotoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D4855B1DE6E00100D632F0 /* MJPhotoToolbar.m */; };
+		59D485661DE6E00100D632F0 /* MJPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D4855D1DE6E00100D632F0 /* MJPhotoView.m */; };
+		59D485671DE6E00100D632F0 /* SDWebImageManager+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D4855F1DE6E00100D632F0 /* SDWebImageManager+MJ.m */; };
 		59D94DA41DD4A9BF00CC2B6C /* WQHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D94DA31DD4A9BF00CC2B6C /* WQHttpTool.m */; };
 		59DFA9631DD859310059B701 /* WQHomeStatusesResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DFA9621DD859310059B701 /* WQHomeStatusesResult.m */; };
 		59DFA9661DD8594B0059B701 /* WQHomeStatusesParms.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DFA9651DD8594B0059B701 /* WQHomeStatusesParms.m */; };
@@ -256,6 +264,21 @@
 		59BA047C1DB496E7004AB027 /* WQMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQMessageViewController.m; sourceTree = "<group>"; };
 		59BA04811DB496E7004AB027 /* WQProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQProfileViewController.h; sourceTree = "<group>"; };
 		59BA04821DB496E7004AB027 /* WQProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQProfileViewController.m; sourceTree = "<group>"; };
+		59D485511DE6E00100D632F0 /* MJPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhoto.h; sourceTree = "<group>"; };
+		59D485521DE6E00100D632F0 /* MJPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhoto.m; sourceTree = "<group>"; };
+		59D485531DE6E00100D632F0 /* MJPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJPhotoBrowser.bundle; sourceTree = "<group>"; };
+		59D485541DE6E00100D632F0 /* MJPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhotoBrowser.h; sourceTree = "<group>"; };
+		59D485551DE6E00100D632F0 /* MJPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhotoBrowser.m; sourceTree = "<group>"; };
+		59D485561DE6E00100D632F0 /* MJPhotoLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhotoLoadingView.h; sourceTree = "<group>"; };
+		59D485571DE6E00100D632F0 /* MJPhotoLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhotoLoadingView.m; sourceTree = "<group>"; };
+		59D485581DE6E00100D632F0 /* MJPhotoProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhotoProgressView.h; sourceTree = "<group>"; };
+		59D485591DE6E00100D632F0 /* MJPhotoProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhotoProgressView.m; sourceTree = "<group>"; };
+		59D4855A1DE6E00100D632F0 /* MJPhotoToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhotoToolbar.h; sourceTree = "<group>"; };
+		59D4855B1DE6E00100D632F0 /* MJPhotoToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhotoToolbar.m; sourceTree = "<group>"; };
+		59D4855C1DE6E00100D632F0 /* MJPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhotoView.h; sourceTree = "<group>"; };
+		59D4855D1DE6E00100D632F0 /* MJPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhotoView.m; sourceTree = "<group>"; };
+		59D4855E1DE6E00100D632F0 /* SDWebImageManager+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SDWebImageManager+MJ.h"; sourceTree = "<group>"; };
+		59D4855F1DE6E00100D632F0 /* SDWebImageManager+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SDWebImageManager+MJ.m"; sourceTree = "<group>"; };
 		59D94DA21DD4A9BE00CC2B6C /* WQHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQHttpTool.h; sourceTree = "<group>"; };
 		59D94DA31DD4A9BF00CC2B6C /* WQHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQHttpTool.m; sourceTree = "<group>"; };
 		59DFA9611DD859310059B701 /* WQHomeStatusesResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQHomeStatusesResult.h; sourceTree = "<group>"; };
@@ -809,6 +832,28 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		59D485501DE6E00100D632F0 /* MJPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				59D485511DE6E00100D632F0 /* MJPhoto.h */,
+				59D485521DE6E00100D632F0 /* MJPhoto.m */,
+				59D485531DE6E00100D632F0 /* MJPhotoBrowser.bundle */,
+				59D485541DE6E00100D632F0 /* MJPhotoBrowser.h */,
+				59D485551DE6E00100D632F0 /* MJPhotoBrowser.m */,
+				59D485561DE6E00100D632F0 /* MJPhotoLoadingView.h */,
+				59D485571DE6E00100D632F0 /* MJPhotoLoadingView.m */,
+				59D485581DE6E00100D632F0 /* MJPhotoProgressView.h */,
+				59D485591DE6E00100D632F0 /* MJPhotoProgressView.m */,
+				59D4855A1DE6E00100D632F0 /* MJPhotoToolbar.h */,
+				59D4855B1DE6E00100D632F0 /* MJPhotoToolbar.m */,
+				59D4855C1DE6E00100D632F0 /* MJPhotoView.h */,
+				59D4855D1DE6E00100D632F0 /* MJPhotoView.m */,
+				59D4855E1DE6E00100D632F0 /* SDWebImageManager+MJ.h */,
+				59D4855F1DE6E00100D632F0 /* SDWebImageManager+MJ.m */,
+			);
+			path = MJPhotoBrowser;
+			sourceTree = "<group>";
+		};
 		59DFA98F1DD883670059B701 /* HomeStatus */ = {
 			isa = PBXGroup;
 			children = (
@@ -960,6 +1005,7 @@
 		59FB08451DC492B40011EDFC /* LIb */ = {
 			isa = PBXGroup;
 			children = (
+				59D485501DE6E00100D632F0 /* MJPhotoBrowser */,
 				597E0C4D1DCB47F7006E2084 /* MJExtension */,
 				597E0BFC1DCB2708006E2084 /* SDWebImage */,
 				59FB08461DC492B40011EDFC /* AFNetworking */,
@@ -1117,6 +1163,7 @@
 				59FB086A1DC492B40011EDFC /* MBProgressHUD.bundle in Resources */,
 				59796F421DB4B89F00ACFE86 /* WQTwoViewController.xib in Resources */,
 				59BA04251DB3A8BE004AB027 /* Assets.xcassets in Resources */,
+				59D485611DE6E00100D632F0 /* MJPhotoBrowser.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1143,6 +1190,7 @@
 			files = (
 				597E0C2B1DCB2708006E2084 /* UIImageView+HighlightedWebCache.m in Sources */,
 				59FB08651DC492B40011EDFC /* AFURLConnectionOperation.m in Sources */,
+				59D485671DE6E00100D632F0 /* SDWebImageManager+MJ.m in Sources */,
 				59FBB6C11DC9B25C0057E8B2 /* WQAccountTool.m in Sources */,
 				59796F371DB4B4F700ACFE86 /* UIBarButtonItem+Extension.m in Sources */,
 				597E0C491DCB3F78006E2084 /* WQUser.m in Sources */,
@@ -1153,6 +1201,7 @@
 				59FB08671DC492B40011EDFC /* AFURLResponseSerialization.m in Sources */,
 				59DFA9821DD8710B0059B701 /* WQUserTool.m in Sources */,
 				59DFA9761DD86FB80059B701 /* WQStatusTool.m in Sources */,
+				59D485651DE6E00100D632F0 /* MJPhotoToolbar.m in Sources */,
 				597E0C661DCB47F7006E2084 /* MJTypeEncoding.m in Sources */,
 				59FB08441DC4896D0011EDFC /* WQOAuthViewController.m in Sources */,
 				59BA048B1DB496E7004AB027 /* WQProfileViewController.m in Sources */,
@@ -1201,6 +1250,7 @@
 				597E0C231DCB2708006E2084 /* SDWebImageDownloader.m in Sources */,
 				597E0C461DCB3F6D006E2084 /* WQstatuses.m in Sources */,
 				5925333F1DD47129007EA9F9 /* WQComposePhotoView.m in Sources */,
+				59D485621DE6E00100D632F0 /* MJPhotoBrowser.m in Sources */,
 				5992A2281DBFA0C7000B15C9 /* WQNewFeature.m in Sources */,
 				59DFA9631DD859310059B701 /* WQHomeStatusesResult.m in Sources */,
 				59FB08691DC492B40011EDFC /* MBProgressHUD+MJ.m in Sources */,
@@ -1221,6 +1271,7 @@
 				59D94DA41DD4A9BF00CC2B6C /* WQHttpTool.m in Sources */,
 				597E0B9A1DCB1B6F006E2084 /* Foundation+Log.m in Sources */,
 				59F1FC2F1DB76D0300405E1B /* WQPopMeun.m in Sources */,
+				59D485641DE6E00100D632F0 /* MJPhotoProgressView.m in Sources */,
 				5970A22F1DBF60FE00BB6F5C /* WQCompose.m in Sources */,
 				597E0C641DCB47F7006E2084 /* MJMethod.m in Sources */,
 				59DFA98B1DD87B230059B701 /* WQBeasTool.m in Sources */,
@@ -1230,6 +1281,7 @@
 				59DFA9B01DD9CE280059B701 /* WQDetailView.m in Sources */,
 				59796F461DB4BA7500ACFE86 /* WQOneViewController.m in Sources */,
 				591655BF1DE5661900C7716B /* WQStatusPhotosView.m in Sources */,
+				59D485661DE6E00100D632F0 /* MJPhotoView.m in Sources */,
 				59DFA9CC1DD9E2620059B701 /* WQOriginalFrame.m in Sources */,
 				59DFA9B61DD9CE9A0059B701 /* WQRetweetedVeiw.m in Sources */,
 				59F1FC291DB6003700405E1B /* WQSearchBar.m in Sources */,
@@ -1237,7 +1289,9 @@
 				59DFA9881DD8742F0059B701 /* WQSendStatusResult.m in Sources */,
 				592622FF1DCDC03E0053232B /* WQTextView.m in Sources */,
 				59DFA9AD1DD9CE1B0059B701 /* WQToolbarView.m in Sources */,
+				59D485631DE6E00100D632F0 /* MJPhotoLoadingView.m in Sources */,
 				597E0C201DCB2708006E2084 /* SDImageCache.m in Sources */,
+				59D485601DE6E00100D632F0 /* MJPhoto.m in Sources */,
 				59DFA9851DD8738B0059B701 /* WQSendStatusParms.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

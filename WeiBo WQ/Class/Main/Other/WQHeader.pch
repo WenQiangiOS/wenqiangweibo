@@ -51,19 +51,21 @@
 
 #define WQScreenH [UIScreen mainScreen].bounds.size.height
 
-
+//
+//#define FONTDESCR [[UIFontDescriptor preferredFontDescriptorWithTextStyle:UIFontTextStyleBody] fontDescriptorWithSize:UIFontWeightUltraLight]
 // cell的计算参数
 // cell的内边距
 #define WQStatusCellInset 10
 
 // 原创微博昵称字体
-#define WQStatusOrginalNameFont [UIFont systemFontOfSize:14]
+#define WQStatusOrginalNameFont [UIFont systemFontOfSize:13.0f]
 // 原创微博时间字体
-#define WQStatusOrginalTimeFont [UIFont systemFontOfSize:12]
+#define WQStatusOrginalTimeFont [UIFont systemFontOfSize:10.0f]
 // 原创微博来源字体
 #define WQStatusOrginalSourceFont WQStatusOrginalTimeFont
 // 原创微博正文字体
-#define WQStatusOrginalTextFont [UIFont systemFontOfSize:14]
+#define WQStatusOrginalTextFont [UIFont systemFontOfSize:13.0f]
+//#define WQStatusOrginalTextFont  [UIFont fontWithDescriptor:FONTDESCR size:14.0f]
 
 // 转发微博昵称字体
 #define WQStatusRetweetedNameFont WQStatusOrginalNameFont
@@ -72,6 +74,15 @@
 
 //tableView 有点灰的颜色
 #define WQLittleGray  [UIColor colorWithRed:0.96 green:0.96 blue:0.96 alpha:0.96]
+
+//有点黑的颜色
+#define WQLtttleBlack [UIColor colorWithRed:0.40 green:0.40 blue:0.40 alpha:1]
+
+//更黑
+#define WQMoreBlack [UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1]
+
+
+
 
 
 #endif /* WQHeader_pch */

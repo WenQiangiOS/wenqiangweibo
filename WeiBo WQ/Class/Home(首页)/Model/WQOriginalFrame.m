@@ -17,8 +17,8 @@
     /** 头像 */
     CGFloat iconX = 10;
     CGFloat iconY = 10;
-    CGFloat iconW = 45;
-    CGFloat iconH = 45;
+    CGFloat iconW = 44;
+    CGFloat iconH = 44;
     self.iconFrame = CGRectMake(iconX, iconY, iconW, iconH);
 
     
@@ -32,7 +32,7 @@
     // 会员
     
     if (status.user.isVip) {
-        CGFloat vipX = CGRectGetMaxX(self.nameFrame) +WQStatusCellInset;
+        CGFloat vipX = CGRectGetMaxX(self.nameFrame) +WQStatusCellInset-5;
         CGFloat vipY = nameY;
         CGFloat vipH = self.nameFrame.size.height;
         CGFloat vipW = vipH;

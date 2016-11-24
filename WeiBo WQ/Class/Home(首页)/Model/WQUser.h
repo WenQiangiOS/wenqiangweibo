@@ -72,7 +72,11 @@
 
 /**allow_all_act_msg 	boolean 	是否允许所有人给我发私信，true：是，false：否*/
 /**geo_enabled 	boolean 	是否允许标识用户的地理位置，true：是，false：否*/
+
 /**verified 	boolean 	是否是微博认证用户，即加V用户，true：是，false：否*/
+
+//@property (nonatomic , assign,getter=isV) BOOL  verified;
+
 
 /** 	string 	用户备注信息，只有在查询用户关系时才返回此字段*/
 @property (nonatomic , copy)NSString * remark;

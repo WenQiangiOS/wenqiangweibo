@@ -23,6 +23,9 @@
 @property (nonatomic , weak)UILabel * timeLabel;
 /** 头像 */
 @property (nonatomic , weak)UIImageView * iconView;
+/** v图标 */
+@property (nonatomic , weak)UIImageView * vView ;
+
 
 /**
  *  会员
@@ -40,6 +43,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self ) {
+
         // 昵称
         UILabel * nameLabel = [[UILabel alloc] init];
         nameLabel.font = WQStatusOrginalNameFont;
@@ -50,6 +54,7 @@
         //正文
         UILabel * textLabel = [[UILabel alloc] init];
         textLabel.font = WQStatusOrginalTextFont;
+        textLabel.textColor = WQMoreBlack;
         textLabel.numberOfLines = 0;
         [self addSubview:textLabel];
         self.textLabel = textLabel;
@@ -74,6 +79,11 @@
         UIImageView * iconView = [[UIImageView alloc]init];
         [self addSubview:iconView];
         self.iconView = iconView;
+        
+//        // 加V图标
+//        UIImageView * vView = [[UIImageView alloc] init];
+//        [self addSubview:vView];
+//        self.vView = vView;
         
         
         //图片
@@ -110,6 +120,15 @@
     self.iconView.frame = orginalFrame.iconFrame;
     
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage resizedImage:@"avatar_default"]];
+    
+    //头像切成圆形
+    self.iconView.layer.cornerRadius = orginalFrame.iconFrame.size.width * 0.5;
+    self.iconView.layer.masksToBounds = YES;
+    [self.iconView.layer setBorderColor:(__bridge CGColorRef _Nullable)([UIColor clearColor])];
+    self.iconView.contentMode = UIViewContentModeScaleAspectFit;
+    
+
+    
     
     
     // 昵称

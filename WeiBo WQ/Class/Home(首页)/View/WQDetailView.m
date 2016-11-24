@@ -19,6 +19,8 @@
 @implementation WQDetailView
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+        self.userInteractionEnabled = YES;
+
         // 设置原生微博
         WQOriginalView * originalView = [[WQOriginalView alloc] init];
         [self addSubview:originalView];
