@@ -25,7 +25,7 @@
 
 #define WQColor(r,g,b)[UIColor colorWithRed:(r) /256.0 green:(g) /256.0 blue:(b) /256.0 alpha:1];
 
-#define WQNaviagtionTitleFont [UIFont boldSystemFontOfSize:20]
+#define WQNaviagtionTitleFont [UIFont boldSystemFontOfSize:16]
 
 #ifdef DEBUG // 调试状态打开log功能
 #define WQLOG(...) NSLog(__VA_ARGS__)
@@ -63,7 +63,7 @@
 // 原创微博来源字体
 #define WQStatusOrginalSourceFont WQStatusOrginalTimeFont
 // 原创微博正文字体
-#define WQStatusOrginalTextFont [UIFont systemFontOfSize:15]
+#define WQStatusOrginalTextFont [UIFont systemFontOfSize:14]
 
 // 转发微博昵称字体
 #define WQStatusRetweetedNameFont WQStatusOrginalNameFont

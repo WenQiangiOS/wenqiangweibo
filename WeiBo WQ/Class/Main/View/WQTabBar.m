@@ -14,6 +14,8 @@
 
 @implementation WQTabBar
 
+
+
 - (id)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         // 设置tabbar的外观
@@ -21,11 +23,13 @@
         //设置加号按钮
         [self setupPlusButton];
         
+        
+       
+        
     }
     
     return self;
 }
-
 
 
 //// 设置tabbar的外观
