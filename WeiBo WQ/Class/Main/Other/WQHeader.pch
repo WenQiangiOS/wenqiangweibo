@@ -25,7 +25,7 @@
 
 #define WQColor(r,g,b)[UIColor colorWithRed:(r) /256.0 green:(g) /256.0 blue:(b) /256.0 alpha:1];
 
-#define WQNaviagtionTitleFont [UIFont boldSystemFontOfSize:16]
+#define WQNaviagtionTitleFont [UIFont boldSystemFontOfSize:15]
 
 #ifdef DEBUG // 调试状态打开log功能
 #define WQLOG(...) NSLog(__VA_ARGS__)

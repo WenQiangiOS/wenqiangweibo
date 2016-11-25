@@ -20,7 +20,7 @@
 +(void)setNavigationItem {
     
     UINavigationBar * appearance = [UINavigationBar appearance];
-    NSDictionary * attrs = @{NSFontAttributeName:[UIFont boldSystemFontOfSize:18],NSForegroundColorAttributeName:[UIColor blackColor]};
+    NSDictionary * attrs = @{NSFontAttributeName:WQNaviagtionTitleFont,NSForegroundColorAttributeName:[UIColor blackColor]};
     [appearance setTitleTextAttributes:attrs];
     
 }

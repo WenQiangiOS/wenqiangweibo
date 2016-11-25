@@ -16,17 +16,35 @@
 #import "MBProgressHUD+MJ.h"
 #import "WQStatusTool.h"
 #import "WQHttpTool.h"
+#import "WQEmotionKeyBoard.h"
 @interface WQCompose ()<WQComposeToolBarDelegate,UITextViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (nonatomic , weak)WQTextView * textView;
 @property (nonatomic , weak)WQComposeToolBar * toolBar;
 @property (nonatomic , weak)WQComposePhotoView * photoView;
 @property (nonatomic , weak)UIBarButtonItem * sendBarBt;
 
+@property (nonatomic , strong) WQEmotionKeyBoard* emotionKeyBoard;
+
+
+@property (nonatomic , assign,getter=isChangeKeyBoard) BOOL  changeKeyBoard;
+
 
 
 @end
 
 @implementation WQCompose
+- (WQEmotionKeyBoard *)emotionKeyBoard {
+    if (!_emotionKeyBoard) {
+        
+        self.emotionKeyBoard = [WQEmotionKeyBoard emotionKeyBoard];
+       self.emotionKeyBoard.backgroundColor = [UIColor blueColor];
+        self.emotionKeyBoard.width =WQScreenW;
+       self.emotionKeyBoard.height = 200;
+    }
+    
+    return _emotionKeyBoard;
+}
+
 #pragma mark 私有化方法
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -83,7 +101,7 @@
     textView.placehoderColor = [UIColor lightGrayColor];
     textView.font = [UIFont systemFontOfSize:14];
     textView.delegate = self;
-    self.textView.alwaysBounceVertical = YES;
+    textView.alwaysBounceVertical = YES;
 
     
     [self.view addSubview:textView];
@@ -108,6 +126,10 @@
 - (void)setUpNavigationBar {
     //设置标题
     self.title = @"发微博";
+//    UINavigationBar * appearance = [UINavigationBar appearance];
+//    NSDictionary * attrs = @{NSFontAttributeName:WQNaviagtionTitleFont,NSForegroundColorAttributeName:[UIColor blackColor]};
+//    [appearance setTitleTextAttributes:attrs];
+//    
     //设置view的背景颜色
     self.view.backgroundColor = [UIColor whiteColor];
     //设置取消的navigationBar的按钮
@@ -271,7 +293,15 @@
 }
 
 - (void)keyboardWillHiden:(NSNotification*)note {
+    
+//    WQLOG(@"%@",note.userInfo);
+    if (self.isChangeKeyBoard) {
+        self.changeKeyBoard = NO;
+        return;
+    }
+    
     //键盘消失的时候动画时间
+
     CGFloat durtion = [note.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     
     [UIView animateWithDuration:durtion animations:^{
@@ -309,6 +339,28 @@
 }
 //打开表情方法
 - (void)openEmotion {
+    
+    
+    //设置键盘状态,一开始设置为编辑状态
+    self.changeKeyBoard = YES;
+    
+    if (self.textView.inputView) {//显示自定义的键盘,切换系统自带键盘
+        self.textView.inputView = nil; // 系统自带键盘显示self.text.inputView = nil;
+        self.toolBar.showEmotionButton = YES; //显示表情按钮
+    } else {
+        self.textView.inputView = self.emotionKeyBoard; //切换成表情按钮
+        self.toolBar.showEmotionButton = NO; //显示文字按钮
+    }
+    
+    
+    //键盘切换的时候,要先退出键盘然后在显示键盘
+    [self.textView resignFirstResponder];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.textView becomeFirstResponder];
+    });
+    
+    
     
 }
 

@@ -13,6 +13,11 @@
 		5925333C1DD455D9007EA9F9 /* WQComposeToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5925333B1DD455D9007EA9F9 /* WQComposeToolBar.m */; };
 		5925333F1DD47129007EA9F9 /* WQComposePhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5925333E1DD47129007EA9F9 /* WQComposePhotoView.m */; };
 		592622FF1DCDC03E0053232B /* WQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 592622FE1DCDC03E0053232B /* WQTextView.m */; };
+		593826E71DE82846009C317A /* WQEmotionKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 593826E61DE82846009C317A /* WQEmotionKeyBoard.m */; };
+		593826EA1DE836E5009C317A /* WQEmotionListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 593826E91DE836E5009C317A /* WQEmotionListView.m */; };
+		593826ED1DE8430C009C317A /* WQEmotionToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 593826EC1DE8430C009C317A /* WQEmotionToolbarView.m */; };
+		593828B41DE848F7009C317A /* WQEmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 593828B31DE848F7009C317A /* WQEmotion.m */; };
+		5960C4F21DE85883004D0B1B /* EmotionIcons in Resources */ = {isa = PBXBuildFile; fileRef = 5960C4F11DE85883004D0B1B /* EmotionIcons */; };
 		5970A22F1DBF60FE00BB6F5C /* WQCompose.m in Sources */ = {isa = PBXBuildFile; fileRef = 5970A22E1DBF60FE00BB6F5C /* WQCompose.m */; };
 		59796F311DB4A13500ACFE86 /* WQNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59796F301DB4A13500ACFE86 /* WQNavigationController.m */; };
 		59796F341DB4AA8000ACFE86 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 59796F331DB4AA8000ACFE86 /* UIView+Extension.m */; };
@@ -154,6 +159,15 @@
 		5925333E1DD47129007EA9F9 /* WQComposePhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQComposePhotoView.m; sourceTree = "<group>"; };
 		592622FD1DCDC03E0053232B /* WQTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQTextView.h; sourceTree = "<group>"; };
 		592622FE1DCDC03E0053232B /* WQTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQTextView.m; sourceTree = "<group>"; };
+		593826E51DE82846009C317A /* WQEmotionKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQEmotionKeyBoard.h; sourceTree = "<group>"; };
+		593826E61DE82846009C317A /* WQEmotionKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQEmotionKeyBoard.m; sourceTree = "<group>"; };
+		593826E81DE836E5009C317A /* WQEmotionListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQEmotionListView.h; sourceTree = "<group>"; };
+		593826E91DE836E5009C317A /* WQEmotionListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQEmotionListView.m; sourceTree = "<group>"; };
+		593826EB1DE8430C009C317A /* WQEmotionToolbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQEmotionToolbarView.h; sourceTree = "<group>"; };
+		593826EC1DE8430C009C317A /* WQEmotionToolbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQEmotionToolbarView.m; sourceTree = "<group>"; };
+		593828B21DE848F7009C317A /* WQEmotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQEmotion.h; sourceTree = "<group>"; };
+		593828B31DE848F7009C317A /* WQEmotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQEmotion.m; sourceTree = "<group>"; };
+		5960C4F11DE85883004D0B1B /* EmotionIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EmotionIcons; sourceTree = "<group>"; };
 		5970A22D1DBF60FE00BB6F5C /* WQCompose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCompose.h; sourceTree = "<group>"; };
 		5970A22E1DBF60FE00BB6F5C /* WQCompose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCompose.m; sourceTree = "<group>"; };
 		59796F2F1DB4A13500ACFE86 /* WQNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQNavigationController.h; sourceTree = "<group>"; };
@@ -412,6 +426,19 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		593826E41DE82824009C317A /* EmotionView */ = {
+			isa = PBXGroup;
+			children = (
+				593826E51DE82846009C317A /* WQEmotionKeyBoard.h */,
+				593826E61DE82846009C317A /* WQEmotionKeyBoard.m */,
+				593826E81DE836E5009C317A /* WQEmotionListView.h */,
+				593826E91DE836E5009C317A /* WQEmotionListView.m */,
+				593826EB1DE8430C009C317A /* WQEmotionToolbarView.h */,
+				593826EC1DE8430C009C317A /* WQEmotionToolbarView.m */,
+			);
+			path = EmotionView;
+			sourceTree = "<group>";
+		};
 		5970A21D1DBF5FDE00BB6F5C /* Compose(发微博) */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +461,8 @@
 		5970A21F1DBF5FDE00BB6F5C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				593828B21DE848F7009C317A /* WQEmotion.h */,
+				593828B31DE848F7009C317A /* WQEmotion.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -441,6 +470,7 @@
 		5970A2201DBF5FDE00BB6F5C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				593826E41DE82824009C317A /* EmotionView */,
 				59F1FC271DB6003600405E1B /* WQSearchBar.h */,
 				59F1FC281DB6003700405E1B /* WQSearchBar.m */,
 				592622FD1DCDC03E0053232B /* WQTextView.h */,
@@ -564,6 +594,7 @@
 		59BA04151DB3A8BE004AB027 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5960C4F11DE85883004D0B1B /* EmotionIcons */,
 				59BA04771DB496E7004AB027 /* WQHeader.pch */,
 				59BA04161DB3A8BE004AB027 /* main.m */,
 				59BA04241DB3A8BE004AB027 /* Assets.xcassets */,
@@ -1160,6 +1191,7 @@
 				59E693B51DCC90BA00B7AB1E /* WQLoadingMoreFooter.xib in Resources */,
 				59BA04281DB3A8BE004AB027 /* LaunchScreen.storyboard in Resources */,
 				59796F471DB4BA7500ACFE86 /* WQOneViewController.xib in Resources */,
+				5960C4F21DE85883004D0B1B /* EmotionIcons in Resources */,
 				59FB086A1DC492B40011EDFC /* MBProgressHUD.bundle in Resources */,
 				59796F421DB4B89F00ACFE86 /* WQTwoViewController.xib in Resources */,
 				59BA04251DB3A8BE004AB027 /* Assets.xcassets in Resources */,
@@ -1203,6 +1235,7 @@
 				59DFA9761DD86FB80059B701 /* WQStatusTool.m in Sources */,
 				59D485651DE6E00100D632F0 /* MJPhotoToolbar.m in Sources */,
 				597E0C661DCB47F7006E2084 /* MJTypeEncoding.m in Sources */,
+				593826EA1DE836E5009C317A /* WQEmotionListView.m in Sources */,
 				59FB08441DC4896D0011EDFC /* WQOAuthViewController.m in Sources */,
 				59BA048B1DB496E7004AB027 /* WQProfileViewController.m in Sources */,
 				59DFA9971DD884290059B701 /* WQAccessToken.m in Sources */,
@@ -1233,6 +1266,7 @@
 				59FBB6BE1DC9ACF30057E8B2 /* WQAccount.m in Sources */,
 				59DFA9A31DD890340059B701 /* WQUnReadCountParam.m in Sources */,
 				59FB08681DC492B40011EDFC /* AFURLSessionManager.m in Sources */,
+				593826ED1DE8430C009C317A /* WQEmotionToolbarView.m in Sources */,
 				59F1FC2C1DB75C1F00405E1B /* WQTitleButton.m in Sources */,
 				597E0C621DCB47F7006E2084 /* MJIvar.m in Sources */,
 				59796F311DB4A13500ACFE86 /* WQNavigationController.m in Sources */,
@@ -1244,6 +1278,7 @@
 				59FB08631DC492B40011EDFC /* AFNetworkReachabilityManager.m in Sources */,
 				5925333C1DD455D9007EA9F9 /* WQComposeToolBar.m in Sources */,
 				59DFA98E1DD87E6D0059B701 /* WQAccessTokeParam.m in Sources */,
+				593828B41DE848F7009C317A /* WQEmotion.m in Sources */,
 				597E0C4C1DCB3F8B006E2084 /* WQPhoto.m in Sources */,
 				59DFA9C61DD9E2320059B701 /* WQStatusCellFrame.m in Sources */,
 				597E0C2A1DCB2708006E2084 /* UIImage+WebP.m in Sources */,
@@ -1254,6 +1289,7 @@
 				5992A2281DBFA0C7000B15C9 /* WQNewFeature.m in Sources */,
 				59DFA9631DD859310059B701 /* WQHomeStatusesResult.m in Sources */,
 				59FB08691DC492B40011EDFC /* MBProgressHUD+MJ.m in Sources */,
+				593826E71DE82846009C317A /* WQEmotionKeyBoard.m in Sources */,
 				59FB08611DC492B40011EDFC /* AFHTTPRequestOperationManager.m in Sources */,
 				59DFA9AA1DD9CDCB0059B701 /* WQStatusCell.m in Sources */,
 				597E0C291DCB2708006E2084 /* UIImage+MultiFormat.m in Sources */,

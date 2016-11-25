@@ -28,5 +28,8 @@ typedef enum {
 @property (nonatomic , weak)id<WQComposeToolBarDelegate>delegate;
 
 
+@property (nonatomic , assign,getter=isShowEmotionButton) BOOL  showEmotionButton;
+
+
 
 @end
